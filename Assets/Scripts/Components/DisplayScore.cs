@@ -11,8 +11,15 @@ public class DisplayScore : MonoBehaviour
 
     private void Start()
     {
-        highScoreFormat = highScoreDisplay.text;
-        currentScoreFormat = currentScoreDisplay.text;
+        if (highScoreDisplay != null)
+        {
+            highScoreFormat = highScoreDisplay.text;
+        }
+
+        if (currentScoreDisplay != null)
+        {
+            currentScoreFormat = currentScoreDisplay.text;
+        }
     }
 
     private void Update()
