@@ -35,12 +35,7 @@ public class PlayerInputWrapper : MonoBehaviour
     public void OnFire()
     {
         GameObject go = Instantiate(fireSpellPrefab);
-
-        Animator fireSpellAnimator = go.GetComponent<Animator>();
-        fireSpellAnimator.SetFloat("Direction", DirectionUtil.ToAnimationDirection(direction));
-
-        Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
-        rb.velocity = DirectionUtil.ToVector(direction);
+        go.GetComponent<Projectile>().direction = direction;
         go.transform.position = transform.position;
     }
 
