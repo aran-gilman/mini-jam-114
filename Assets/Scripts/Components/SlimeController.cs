@@ -14,7 +14,7 @@ public class SlimeController : MonoBehaviour
         if (collision.CompareTag("Projectile"))
         {
             Destroy(gameObject);
-            Destroy(collision.gameObject);
+            collision.GetComponent<Projectile>().Destroy();
 
             int oldScore = PlayerPrefs.GetInt("CurrentScore", 0);
             PlayerPrefs.SetInt("CurrentScore", oldScore + pointValue);

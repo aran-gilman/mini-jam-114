@@ -10,18 +10,19 @@ public class Projectile : MonoBehaviour
 
     public GameObject destructionFX;
 
-    private void Start()
-    {
-        animator.SetFloat("Direction", DirectionUtil.ToAnimationDirection(direction));
-        rb.velocity = DirectionUtil.ToVector(direction) * speed;
-    }
-
-    private void OnDestroy()
+    public void Destroy()
     {
         if (destructionFX != null)
         {
             GameObject go = Instantiate(destructionFX);
             go.transform.position = transform.position;
         }
+        Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        animator.SetFloat("Direction", DirectionUtil.ToAnimationDirection(direction));
+        rb.velocity = DirectionUtil.ToVector(direction) * speed;
     }
 }
