@@ -182,5 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  speed: 3
   animator: {fileID: 6990078676552678266}
   rb: {fileID: 2859784754417998532}
