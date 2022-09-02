@@ -369,7 +369,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'High Score: 9999'
+  m_Text: 'High Score: {0}'
 --- !u!222 &553564216
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Last Score: 9999'
+  m_Text: 'Last Score: {0}'
 --- !u!222 &672796832
 CanvasRenderer:
   m_ObjectHideFlags: 0
