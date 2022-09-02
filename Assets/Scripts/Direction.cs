@@ -25,4 +25,20 @@ public class DirectionUtil
         }
         return Vector2.left;
     }
+
+    public static float ToAnimationDirection(Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.Down:
+                return 0.0f;
+            case Direction.Left:
+                return 1.0f;
+            case Direction.Right:
+                return 2.0f;
+            case Direction.Up:
+                return 3.0f;
+        }
+        return 0.0f;
+    }
 }

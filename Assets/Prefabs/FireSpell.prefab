@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2859784754417998532}
   - component: {fileID: 5322959433638086650}
   - component: {fileID: 4823244290356105991}
+  - component: {fileID: 6990078676552678266}
   m_Layer: 0
   m_Name: FireSpell
   m_TagString: Projectile
@@ -148,3 +149,22 @@ MonoBehaviour:
   xMax: 8
   yMin: -8
   yMax: 4
+--- !u!95 &6990078676552678266
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3551833398128513448}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 367911cb0d86c554ea9f4dd61b32f416, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

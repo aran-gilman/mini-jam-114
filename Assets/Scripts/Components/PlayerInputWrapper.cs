@@ -9,9 +9,6 @@ public class PlayerInputWrapper : MonoBehaviour
     public Sprite upSprite;
 
     public GameObject fireSpellPrefab;
-    public Sprite fireLeftSprite;
-    public Sprite fireRightSprite;
-    public Sprite fireUpSprite;
 
     public SpriteRenderer spriteRenderer;
 
@@ -38,27 +35,13 @@ public class PlayerInputWrapper : MonoBehaviour
     public void OnFire()
     {
         GameObject go = Instantiate(fireSpellPrefab);
-        SpriteRenderer fireSpriteRenderer = go.GetComponent<SpriteRenderer>();
+
+        Animator fireSpellAnimator = go.GetComponent<Animator>();
+        fireSpellAnimator.SetFloat("Direction", DirectionUtil.ToAnimationDirection(direction));
+
         Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
+        rb.velocity = DirectionUtil.ToVector(direction);
         go.transform.position = transform.position;
-
-        switch(direction)
-        {
-            case Direction.Left:
-                fireSpriteRenderer.sprite = fireLeftSprite;
-                rb.velocity = Vector2.left;
-                break;
-
-            case Direction.Right:
-                fireSpriteRenderer.sprite = fireRightSprite;
-                rb.velocity = Vector2.right;
-                break;
-
-            case Direction.Up:
-                fireSpriteRenderer.sprite = fireUpSprite;
-                rb.velocity = Vector2.up;
-                break;
-        }
     }
 
     private Direction direction;
