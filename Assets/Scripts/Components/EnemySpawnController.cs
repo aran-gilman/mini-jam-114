@@ -17,6 +17,21 @@ public class EnemySpawnController : MonoBehaviour
     public float spawnCooldown = 1.0f;
 
     private float timeInWave;
+    private int waveNumber;
+
+    private float maxWaveTime;
+
+    private void Start()
+    {
+        foreach (var rule in spawnRules)
+        {
+            float estimatedSpawnEnd = rule.time + rule.number * spawnCooldown;
+            if (estimatedSpawnEnd > maxWaveTime)
+            {
+                maxWaveTime = estimatedSpawnEnd;
+            }
+        }
+    }
 
     private void Update()
     {
@@ -31,5 +46,11 @@ public class EnemySpawnController : MonoBehaviour
             }
         }
         timeInWave += Time.deltaTime;
+
+        if (timeInWave > maxWaveTime)
+        {
+            timeInWave = 0.0f;
+            waveNumber++;
+        }
     }
 }
