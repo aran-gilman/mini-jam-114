@@ -2862,6 +2862,14 @@ MonoBehaviour:
     spawnPoint: {fileID: 969178764}
     prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
     number: 3
+  - time: 6
+    spawnPoint: {fileID: 857243978}
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 3
+  - time: 9
+    spawnPoint: {fileID: 857243978}
+    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
+    number: 1
   spawnCooldown: 1
 --- !u!1 &1438745530
 GameObject:
