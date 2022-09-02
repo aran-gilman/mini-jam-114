@@ -9,6 +9,7 @@ public class PlayerInputWrapper : MonoBehaviour
     public Sprite upSprite;
 
     public GameObject fireSpellPrefab;
+    public float projectileCooldown = 1.0f;
 
     public SpriteRenderer spriteRenderer;
 
@@ -34,12 +35,20 @@ public class PlayerInputWrapper : MonoBehaviour
 
     public void OnFire()
     {
+        if (currentProjectileCooldown > 0.0f)
+        {
+            return;
+        }
+
         GameObject go = Instantiate(fireSpellPrefab);
         go.GetComponent<Projectile>().direction = direction;
         go.transform.position = transform.position;
+
+        currentProjectileCooldown = projectileCooldown;
     }
 
     private Direction direction;
+    private float currentProjectileCooldown;
 
     private void Start()
     {
@@ -47,5 +56,13 @@ public class PlayerInputWrapper : MonoBehaviour
         spriteRenderer.sprite = leftSprite;
 
         PlayerPrefs.SetInt("CurrentScore", 0);
+    }
+
+    private void Update()
+    {
+        if (currentProjectileCooldown > 0.0f)
+        {
+            currentProjectileCooldown -= Time.deltaTime;
+        }
     }
 }

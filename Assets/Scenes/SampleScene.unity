@@ -2681,9 +2681,7 @@ MonoBehaviour:
   rightSprite: {fileID: 6757282713640645180, guid: 24415bf7f0591284cb6306f7ee46fe4d, type: 3}
   upSprite: {fileID: -6781412095145881161, guid: 24415bf7f0591284cb6306f7ee46fe4d, type: 3}
   fireSpellPrefab: {fileID: 3551833398128513448, guid: daae29ab9132a86458b7c719744eda0b, type: 3}
-  fireLeftSprite: {fileID: 9204931480678746970, guid: 84d689f894ccfae469d217984690c796, type: 3}
-  fireRightSprite: {fileID: -8359625512513901107, guid: 84d689f894ccfae469d217984690c796, type: 3}
-  fireUpSprite: {fileID: 7804807344221744696, guid: 84d689f894ccfae469d217984690c796, type: 3}
+  projectileCooldown: 0.1
   spriteRenderer: {fileID: 1130759739}
 --- !u!61 &1130759743
 BoxCollider2D:
