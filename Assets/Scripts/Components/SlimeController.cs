@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SlimeController : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class SlimeController : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
+        }
+        else if (collision.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
