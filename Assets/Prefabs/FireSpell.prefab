@@ -185,3 +185,4 @@ MonoBehaviour:
   speed: 3
   animator: {fileID: 6990078676552678266}
   rb: {fileID: 2859784754417998532}
+  destructionFX: {fileID: 4057292731744392228, guid: e5102900c561baf4a9202e8841ff8edb, type: 3}
