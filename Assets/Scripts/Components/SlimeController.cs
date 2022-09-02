@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +5,7 @@ public class SlimeController : MonoBehaviour
 {
     public float initialSpeed;
     public Direction direction;
+    public int pointValue;
 
     public Rigidbody2D rb;
 
@@ -16,9 +15,18 @@ public class SlimeController : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
+
+            int oldScore = PlayerPrefs.GetInt("CurrentScore", 0);
+            PlayerPrefs.SetInt("CurrentScore", oldScore + pointValue);
         }
         else if (collision.CompareTag("Player"))
         {
+            int oldHighScore = PlayerPrefs.GetInt("HighScore", 0);
+            int currentScore = PlayerPrefs.GetInt("CurrentScore", 0);
+            if (currentScore > oldHighScore)
+            {
+                PlayerPrefs.SetInt("HighScore", currentScore);
+            }
             SceneManager.LoadScene("MainMenu");
         }
     }

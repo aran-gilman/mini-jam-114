@@ -146,4 +146,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialSpeed: 1
   direction: 1
+  pointValue: 1
   rb: {fileID: 4229987430690864104}

@@ -67,5 +67,7 @@ public class PlayerInputWrapper : MonoBehaviour
     {
         direction = Direction.Left;
         spriteRenderer.sprite = leftSprite;
+
+        PlayerPrefs.SetInt("CurrentScore", 0);
     }
 }
