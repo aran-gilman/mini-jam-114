@@ -14,6 +14,7 @@ public class PlaySfx : MonoBehaviour
 
     private void Start()
     {
+        // Putting this in Start() instead of Awake() makes it more likely for Play() to be called before audioSource is initialized. However, putting this in Awake() runs the risk of grabbing the "wrong" SfxPlayer, so Start() seems like the lesser of two evils.
         audioSource = GameObject.FindGameObjectWithTag("Sfx").GetComponent<AudioSource>();
     }
 }

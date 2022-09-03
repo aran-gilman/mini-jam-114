@@ -2734,6 +2734,7 @@ GameObject:
   - component: {fileID: 1130759743}
   - component: {fileID: 1130759744}
   - component: {fileID: 1130759745}
+  - component: {fileID: 1130759746}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2855,6 +2856,7 @@ MonoBehaviour:
   fireSpellPrefab: {fileID: 3551833398128513448, guid: daae29ab9132a86458b7c719744eda0b, type: 3}
   projectileCooldown: 0.1
   spriteRenderer: {fileID: 1130759739}
+  sfxPlayer: {fileID: 1130759746}
 --- !u!61 &1130759743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2941,6 +2943,18 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 3
   invincibilityDurationAfterHit: 0.5
+--- !u!114 &1130759746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130759738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e32bab34697ff14b831f750e717e111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1185209358
 GameObject:
   m_ObjectHideFlags: 0

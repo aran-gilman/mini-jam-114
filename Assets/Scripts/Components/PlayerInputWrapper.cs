@@ -12,6 +12,7 @@ public class PlayerInputWrapper : MonoBehaviour
     public float projectileCooldown = 1.0f;
 
     public SpriteRenderer spriteRenderer;
+    public PlaySfx sfxPlayer;
 
     public void OnMove(InputValue value)
     {
@@ -41,8 +42,12 @@ public class PlayerInputWrapper : MonoBehaviour
         }
 
         GameObject go = Instantiate(fireSpellPrefab);
-        go.GetComponent<Projectile>().direction = direction;
         go.transform.position = transform.position;
+
+        Projectile projectile = go.GetComponent<Projectile>();
+        projectile.direction = direction;
+        // We play the sfx here instead of inside Projectile because the projectile's own SfxPlayer may not be initialized yet
+        sfxPlayer.Play(projectile.fireSound);
 
         currentProjectileCooldown = projectileCooldown;
     }

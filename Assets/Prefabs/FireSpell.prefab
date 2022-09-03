@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4823244290356105991}
   - component: {fileID: 6990078676552678266}
   - component: {fileID: 7740723890812615642}
+  - component: {fileID: 6538307651677531922}
   m_Layer: 0
   m_Name: FireSpell
   m_TagString: Projectile
@@ -185,6 +186,19 @@ MonoBehaviour:
   speed: 3
   animator: {fileID: 6990078676552678266}
   rb: {fileID: 2859784754417998532}
+  fireSound: {fileID: 8300000, guid: e36be03f80f02354abc1f239d9a2080e, type: 3}
+  destructionSound: {fileID: 8300000, guid: 2403c3d3028bf9143a193518f49386be, type: 3}
+  sfxPlayer: {fileID: 6538307651677531922}
   destructionFX: {fileID: 4057292731744392228, guid: e5102900c561baf4a9202e8841ff8edb, type: 3}
-  ignoreTags:
-  - Player
+--- !u!114 &6538307651677531922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3551833398128513448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e32bab34697ff14b831f750e717e111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
