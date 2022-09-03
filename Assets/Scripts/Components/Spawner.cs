@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    public Direction slimeMovementDirection;
+    public Direction movementDirection;
 
     public void QueueSpawn(GameObject prefab)
     {
@@ -14,11 +14,11 @@ public class SlimeSpawner : MonoBehaviour
 
     private Queue<GameObject> spawnQueue = new Queue<GameObject>();
 
-    private EnemySpawnController enemySpawnController;
+    private SpawnController enemySpawnController;
 
     private void Start()
     {
-        enemySpawnController = GetComponentInParent<EnemySpawnController>();
+        enemySpawnController = GetComponentInParent<SpawnController>();
     }
 
     private void Update()
@@ -38,6 +38,8 @@ public class SlimeSpawner : MonoBehaviour
     {
         GameObject go = Instantiate(prefab);
         go.transform.position = transform.position;
-        go.GetComponent<SlimeController>().direction = slimeMovementDirection;
+        IMoving m = go.GetComponent<IMoving>();
+        Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
+        rb.velocity = DirectionUtil.ToVector(movementDirection) * m.InitialSpeed;
     }
 }

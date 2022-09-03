@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawnController : MonoBehaviour
+public class SpawnController : MonoBehaviour
 {
     [Serializable]
     public class SpawnRule
     {
         public float time;
-        public SlimeSpawner spawnPoint;
+        public Spawner spawnPoint;
         public GameObject prefab;
         public int number;
     }

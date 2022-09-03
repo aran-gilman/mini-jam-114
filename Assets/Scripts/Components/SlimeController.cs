@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SlimeController : MonoBehaviour
+public class SlimeController : MonoBehaviour, IMoving
 {
     public float initialSpeed;
-    public Direction direction;
     public int pointValue;
 
     public Rigidbody2D rb;
+
+    public float InitialSpeed { get => initialSpeed; }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,10 +35,5 @@ public class SlimeController : MonoBehaviour
                 SceneManager.LoadScene("MainMenu");
             }
         }
-    }
-
-    private void Start()
-    {
-        rb.velocity = DirectionUtil.ToVector(direction) * initialSpeed;
     }
 }
