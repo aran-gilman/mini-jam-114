@@ -3,7 +3,7 @@ Author: Trevor Lentz
 License: CC-BY-SA 3.0
 Link: https://opengameart.org/content/7-days-of-sorcery-full-album
 
-File: Audio/20 - Game Over.gg
+File: Audio/20 - Game Over.gg, 25 - Finale.ogg
 Author: Avgvst
 License: CC-BY 4.0
 Link: https://opengameart.org/content/generic-8-bit-jrpg-soundtrack
@@ -27,4 +27,4 @@ File: Fonts/kromasky_16x16.png
 Author: Zingot Games (http://www.zingot.com)
 License: CC-BY 4.0, CC-BY 3.0
 Link: https://opengameart.org/content/bitmap-font-pack
-Notes: This font is used in Sprites/Title.*
+Notes: This font is used in Sprites/Title.*, GameOver.*, and Victory.*
