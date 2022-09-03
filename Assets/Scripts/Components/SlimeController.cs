@@ -21,13 +21,18 @@ public class SlimeController : MonoBehaviour
         }
         else if (collision.CompareTag("Player"))
         {
-            int oldHighScore = PlayerPrefs.GetInt("HighScore", 0);
-            int currentScore = PlayerPrefs.GetInt("CurrentScore", 0);
-            if (currentScore > oldHighScore)
+            Health playerHealth = collision.GetComponent<Health>();
+            playerHealth.Change(-1);
+            if (!playerHealth.IsAlive)
             {
-                PlayerPrefs.SetInt("HighScore", currentScore);
+                int oldHighScore = PlayerPrefs.GetInt("HighScore", 0);
+                int currentScore = PlayerPrefs.GetInt("CurrentScore", 0);
+                if (currentScore > oldHighScore)
+                {
+                    PlayerPrefs.SetInt("HighScore", currentScore);
+                }
+                SceneManager.LoadScene("MainMenu");
             }
-            SceneManager.LoadScene("MainMenu");
         }
     }
 
