@@ -36,7 +36,7 @@ public class SlimeController : MonoBehaviour, IMoving
                 {
                     PlayerPrefs.SetInt("HighScore", currentScore);
                 }
-                SceneManager.LoadScene("MainMenu");
+                SceneManager.LoadScene("GameOver");
             }
         }
     }
