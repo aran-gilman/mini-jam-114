@@ -19,8 +19,6 @@ public class SlimeController : MonoBehaviour, IMoving
             health.Change(-1);
             if (!health.IsAlive)
             {
-                int oldScore = PlayerPrefs.GetInt("CurrentScore", 0);
-                PlayerPrefs.SetInt("CurrentScore", oldScore + pointValue);
                 Destroy(gameObject);
             }
         }
@@ -30,12 +28,6 @@ public class SlimeController : MonoBehaviour, IMoving
             playerHealth.Change(-1);
             if (!playerHealth.IsAlive)
             {
-                int oldHighScore = PlayerPrefs.GetInt("HighScore", 0);
-                int currentScore = PlayerPrefs.GetInt("CurrentScore", 0);
-                if (currentScore > oldHighScore)
-                {
-                    PlayerPrefs.SetInt("HighScore", currentScore);
-                }
                 SceneManager.LoadScene("GameOver");
             }
         }

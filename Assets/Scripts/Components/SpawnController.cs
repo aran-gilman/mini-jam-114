@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnController : MonoBehaviour
 {
@@ -17,12 +18,11 @@ public class SpawnController : MonoBehaviour
     public float spawnCooldown = 1.0f;
 
     private float timeInWave;
-    private int waveNumber;
-
     private float maxWaveTime;
 
     private void Start()
     {
+        timeInWave = 0.0f;
         foreach (var rule in spawnRules)
         {
             float estimatedSpawnEnd = rule.time + rule.number * spawnCooldown;
@@ -35,6 +35,12 @@ public class SpawnController : MonoBehaviour
 
     private void Update()
     {
+        // I don't know how or why this happens, but it apparently does when the game first starts...?
+        if (spawnRules.Count == 0)
+        {
+            return;
+        }
+
         foreach (SpawnRule rule in spawnRules)
         {
             if (rule.time >= timeInWave && rule.time < timeInWave + Time.deltaTime)
@@ -49,8 +55,10 @@ public class SpawnController : MonoBehaviour
 
         if (timeInWave > maxWaveTime)
         {
-            timeInWave = 0.0f;
-            waveNumber++;
+            if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+            {
+                SceneManager.LoadScene("Victory");
+            }
         }
     }
 }
