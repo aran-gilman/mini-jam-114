@@ -8,3 +8,8 @@ File: 20 - Game Over.gg
 Author: Avgvst
 License: CC-BY 4.0
 Link: https://opengameart.org/content/generic-8-bit-jrpg-soundtrack
+
+File: Menu Selection Click.wav
+Author: NenadSimic
+License: CC-BY 3.0
+Link: https://opengameart.org/content/menu-selection-click

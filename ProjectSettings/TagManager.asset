@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EnemySpawn
   - Music
+  - Sfx
   layers:
   - Default
   - TransparentFX
