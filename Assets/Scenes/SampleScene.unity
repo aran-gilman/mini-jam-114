@@ -3085,48 +3085,96 @@ MonoBehaviour:
   - time: 0
     spawnPoint: {fileID: 857243978}
     prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
-    number: 3
+    number: 1
   - time: 2
     spawnPoint: {fileID: 2119411560}
     prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
-    number: 3
+    number: 1
   - time: 4
     spawnPoint: {fileID: 969178764}
     prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
-    number: 3
-  - time: 6
+    number: 1
+  - time: 8
     spawnPoint: {fileID: 857243978}
     prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
     number: 3
-  - time: 9
-    spawnPoint: {fileID: 857243978}
-    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
-    number: 1
   - time: 10
     spawnPoint: {fileID: 969178764}
-    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
-    number: 1
-  - time: 10
-    spawnPoint: {fileID: 2119411560}
-    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
-    number: 1
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 3
   - time: 11
+    spawnPoint: {fileID: 2119411560}
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 3
+  - time: 13
+    spawnPoint: {fileID: 969178764}
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 3
+  - time: 14
+    spawnPoint: {fileID: 857243978}
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 3
+  - time: 15
+    spawnPoint: {fileID: 2119411560}
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 3
+  - time: 18
     spawnPoint: {fileID: 857243978}
     prefab: {fileID: 2128731590383965214, guid: 7b5c5337761454a4eb88e0a4c694b851, type: 3}
     number: 1
-  - time: 13
-    spawnPoint: {fileID: 969178764}
+  - time: 22
+    spawnPoint: {fileID: 857243978}
+    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
+    number: 1
+  - time: 23
+    spawnPoint: {fileID: 857243978}
     prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
-    number: 5
-  - time: 13
+    number: 2
+  - time: 25
+    spawnPoint: {fileID: 2119411560}
+    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
+    number: 1
+  - time: 26
     spawnPoint: {fileID: 2119411560}
     prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 2
+  - time: 28
+    spawnPoint: {fileID: 969178764}
+    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
+    number: 1
+  - time: 29
+    spawnPoint: {fileID: 969178764}
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 2
+  - time: 30
+    spawnPoint: {fileID: 2119411560}
+    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
+    number: 2
+  - time: 31
+    spawnPoint: {fileID: 969178764}
+    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
+    number: 2
+  - time: 32
+    spawnPoint: {fileID: 857243978}
+    prefab: {fileID: 465065069316939006, guid: 2ab55c2546ceca6478315044f3723d41, type: 3}
     number: 5
-  - time: 13
+  - time: 34
+    spawnPoint: {fileID: 969178764}
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 4
+  - time: 36
+    spawnPoint: {fileID: 2119411560}
+    prefab: {fileID: 4229987430690864100, guid: 40d75a5cb34c9ce4f926e0d4a6c42f7c, type: 3}
+    number: 4
+  - time: 40
+    spawnPoint: {fileID: 969178764}
+    prefab: {fileID: 2128731590383965214, guid: 7b5c5337761454a4eb88e0a4c694b851, type: 3}
+    number: 1
+  - time: 44
     spawnPoint: {fileID: 857243978}
     prefab: {fileID: 7639649482564090540, guid: 9b27d78dfccdb5b4084ecfe183a976f7, type: 3}
     number: 1
-  spawnCooldown: 1
+  spawnCooldown: 1.5
 --- !u!1 &1438745530
 GameObject:
   m_ObjectHideFlags: 0
