@@ -47,6 +47,12 @@ public class PlayerInputWrapper : MonoBehaviour
         currentProjectileCooldown = projectileCooldown;
     }
 
+    public void OnSlow()
+    {
+        SlowAbility ability = GetComponent<SlowAbility>();
+        ability.Activate();
+    }
+
     private Direction direction;
     private float currentProjectileCooldown;
 
