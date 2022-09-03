@@ -7,6 +7,7 @@ public class SlimeController : MonoBehaviour, IMoving
     public int pointValue;
 
     public Rigidbody2D rb;
+    public Health health;
 
     public float InitialSpeed { get => initialSpeed; }
 
@@ -14,11 +15,14 @@ public class SlimeController : MonoBehaviour, IMoving
     {
         if (collision.CompareTag("Projectile"))
         {
-            Destroy(gameObject);
             collision.GetComponent<Projectile>().Destroy();
-
-            int oldScore = PlayerPrefs.GetInt("CurrentScore", 0);
-            PlayerPrefs.SetInt("CurrentScore", oldScore + pointValue);
+            health.Change(-1);
+            if (!health.IsAlive)
+            {
+                int oldScore = PlayerPrefs.GetInt("CurrentScore", 0);
+                PlayerPrefs.SetInt("CurrentScore", oldScore + pointValue);
+                Destroy(gameObject);
+            }
         }
         else if (collision.CompareTag("Player"))
         {
