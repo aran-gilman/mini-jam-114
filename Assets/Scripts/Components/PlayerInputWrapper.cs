@@ -11,6 +11,11 @@ public class PlayerInputWrapper : MonoBehaviour
     public GameObject fireSpellPrefab;
     public float projectileCooldown = 1.0f;
 
+    public int maxFireSpellCharges = 3;
+    public int currentFireSpellCharges = 3;
+    public float fireSpellChargeCooldown = 0.5f;
+    public float currentChargeCooldown;
+
     public SpriteRenderer spriteRenderer;
     public PlaySfx sfxPlayer;
 
@@ -36,7 +41,7 @@ public class PlayerInputWrapper : MonoBehaviour
 
     public void OnFire()
     {
-        if (currentProjectileCooldown > 0.0f)
+        if (currentProjectileCooldown > 0.0f || currentFireSpellCharges <= 0)
         {
             return;
         }
@@ -50,6 +55,7 @@ public class PlayerInputWrapper : MonoBehaviour
         sfxPlayer.Play(projectile.fireSound);
 
         currentProjectileCooldown = projectileCooldown;
+        currentFireSpellCharges--;
     }
 
     public void OnSlow()
@@ -74,6 +80,19 @@ public class PlayerInputWrapper : MonoBehaviour
         if (currentProjectileCooldown > 0.0f)
         {
             currentProjectileCooldown -= Time.deltaTime;
+        }
+
+        if (currentChargeCooldown > 0.0f)
+        {
+            currentChargeCooldown -= Time.deltaTime;
+            if (currentChargeCooldown < 0.0f && currentFireSpellCharges < maxFireSpellCharges)
+            {
+                currentFireSpellCharges++;
+            }
+        }
+        else if (currentFireSpellCharges != maxFireSpellCharges)
+        {
+            currentChargeCooldown = fireSpellChargeCooldown;
         }
     }
 }
