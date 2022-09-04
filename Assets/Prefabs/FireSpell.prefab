@@ -147,9 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20185b4f260ebb446a38c2f2d1ad6b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMin: -8
-  xMax: 8
-  yMin: -8
+  xMin: -5
+  xMax: 5
+  yMin: -5
   yMax: 4
 --- !u!95 &6990078676552678266
 Animator:
