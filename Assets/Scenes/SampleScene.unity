@@ -3082,7 +3082,7 @@ MonoBehaviour:
   projectileCooldown: 0.1
   maxFireSpellCharges: 3
   currentFireSpellCharges: 3
-  fireSpellChargeCooldown: 0.25
+  fireSpellChargeCooldown: 0.5
   currentChargeCooldown: 0
   spriteRenderer: {fileID: 1130759739}
   sfxPlayer: {fileID: 1130759746}
