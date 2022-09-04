@@ -5,9 +5,11 @@ public class SlimeController : MonoBehaviour, IMoving
 {
     public float initialSpeed;
     public int pointValue;
+    public AudioClip playerHitSound;
 
     public Rigidbody2D rb;
     public Health health;
+    public PlaySfx sfxPlayer;
 
     public float InitialSpeed { get => initialSpeed; }
 
@@ -26,10 +28,12 @@ public class SlimeController : MonoBehaviour, IMoving
         {
             Health playerHealth = collision.GetComponent<Health>();
             playerHealth.Change(-1);
+            sfxPlayer.Play(playerHitSound);
             if (!playerHealth.IsAlive)
             {
                 SceneManager.LoadScene("GameOver");
             }
+            Destroy(gameObject);
         }
     }
 }

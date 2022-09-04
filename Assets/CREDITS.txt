@@ -13,7 +13,7 @@ Author: NenadSimic
 License: CC-BY 3.0
 Link: https://opengameart.org/content/menu-selection-click
 
-File: Audio/sfx_exp_short_soft2.wav, sfx_exp_shortest_hard2.wav
+File: Audio/sfx_exp_short_soft2.wav, sfx_exp_shortest_hard2.wav, sfx_deathscream_human2.wav
 Author: Juhani Junkala (Subspace Audio)
 License: Public Domain CC0
 Link: https://opengameart.org/content/512-sound-effects-8-bit-style
